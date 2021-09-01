@@ -1,0 +1,5 @@
+node_modules
+*/node_modules
+app_frontend/build
+app_backend/dist
+.idea/
