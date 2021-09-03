@@ -3,3 +3,4 @@ node_modules
 app_frontend/build
 app_backend/dist
 .idea/
+mongodb_data
