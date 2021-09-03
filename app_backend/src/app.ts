@@ -1,11 +1,8 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
+import express, { Application } from 'express';
+import users from './Router/userRouter';
 
-// Boot express
 const app: Application = express();
-
-// Application routing
-app.use('/', (req: Request, res: Response, _next: NextFunction) => {
-  res.status(200).send({ data: 'Hello from Oranio AS' });
-});
+app.use(express.json());
+app.use('/', users);
 
 export default app;
