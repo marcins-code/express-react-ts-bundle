@@ -17,6 +17,19 @@ class ArticleTypesController {
         return next(res.status(err.code).json(err.message));
       }
     }
+
+    public static async getPaginatedArticleTypes (req: Request, res: Response, next: NextFunction) {
+      try {
+        const lang = ArticleTypesController.validator.validateLanguage(req.headers);
+        const paginationData = ArticleTypesController.validator.validatePaginationData(req.query);
+        const isAdminRequest = ArticleTypesController.validator.validateAdminRequest(req.headers, req.url);
+        const repository = new ArticleTypeRepository(lang, isAdminRequest.isAuthorized);
+        const articleTypes = await repository.getPaginatedDocuments(paginationData);
+        res.status(200).header({ 'Content-Language': lang }).json({ ...articleTypes });
+      } catch (err:any) {
+        return next(res.status(err.code).json(err.message));
+      }
+    }
 }
 
 export default ArticleTypesController;

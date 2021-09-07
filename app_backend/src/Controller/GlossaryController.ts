@@ -17,6 +17,19 @@ class GlossaryController {
         return next(res.status(err.code).json(err.message));
       }
     }
+
+    public static async getPaginatedGlossary (req: Request, res: Response, next: NextFunction) {
+      try {
+        const lang = GlossaryController.validator.validateLanguage(req.headers);
+        const paginationData = GlossaryController.validator.validatePaginationData(req.query);
+        const isAdminRequest = GlossaryController.validator.validateAdminRequest(req.headers, req.url);
+        const repository = new GlossaryRepository(lang, isAdminRequest.isAuthorized);
+        const glossary = await repository.getPaginatedDocuments(paginationData);
+        res.status(200).header({ 'Content-Language': lang }).json({ ...glossary });
+      } catch (err:any) {
+        return next(res.status(err.code).json(err.message));
+      }
+    }
 }
 
 export default GlossaryController;
