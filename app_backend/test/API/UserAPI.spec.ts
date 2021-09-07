@@ -238,7 +238,7 @@ describe('GET paginated users', () => {
         expect(response.totalDocs).toEqual(totalEnabledUsers);
         expect(response.totalPages).toEqual(Math.ceil(totalEnabledUsers / perPage));
       });
-      it('Should be proper response not last page', async () => {
+      it('Should be proper response on last page', async () => {
         const perPage = 8;
         const page = 4;
         const result = await request(app)
