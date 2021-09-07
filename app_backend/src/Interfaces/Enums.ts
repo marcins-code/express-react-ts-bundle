@@ -8,13 +8,6 @@ export const validLanguages = {
   en: 'en'
 };
 
-
-
-
-
-
-
-
 export enum ErrorTypes {
   NOTFOUND = 'notFound',
   INVALIDINPUT = 'invalidInput',
