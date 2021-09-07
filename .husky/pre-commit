@@ -2,5 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 npx eslint  app_frontend/ --ext .js,.jsx,.tsx,.ts --fix
 npx eslint  app_backend/src/ --ext .js,.jsx,.tsx,.ts --fix
+git add
 
 
