@@ -4,7 +4,6 @@ import UserController from '../Controller/UserController';
 
 const router = Router();
 
-// router.get('/user', UserController.getAllUsers);
 router.get('/user/:id', UserController.getSingleUserById);
 router.get('/admin/user/:id', UserController.getSingleUserById);
 
@@ -13,6 +12,5 @@ router.get('/admin/user', UserController.getPaginatedUsers);
 
 router.post('/user/signUp', AuthenticationController.signUp);
 router.post('/user/login', AuthenticationController.login);
-// router.put('/user/update/:id', UserController.update);
 
 export default router;
