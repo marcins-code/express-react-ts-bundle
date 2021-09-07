@@ -4,3 +4,5 @@ app_frontend/build
 app_backend/dist
 .idea/
 mongodb_data
+Test Results - All_Tests.html
+.husky/

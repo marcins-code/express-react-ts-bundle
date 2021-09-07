@@ -2,3 +2,4 @@ dist
 coverage
 private.key
 private.key.pub
+HttpRequest
