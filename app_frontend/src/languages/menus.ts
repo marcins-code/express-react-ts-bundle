@@ -15,26 +15,9 @@ export const adminMenuItems = [
   {
     name_en: 'articles',
     name_pl: 'artykuły',
-    path: '/admin/article',
+    path: '/administration',
     exact: true,
   },
-  { name_en: 'Types', name_pl: 'Typy', path: '/admin/article-types' },
-  { name_en: 'Glossary', name_pl: 'Słowniczek', path: '/admin/glossary' },
+  { name_en: 'Types', name_pl: 'Typy', path: '/administration/article-types' },
+  { name_en: 'Glossary', name_pl: 'Słowniczek', path: '/administration/glossary' },
 ];
-
-export const settingsPanelItems = {
-  pl: {
-    chooseLang: 'Wybierz język',
-    chooseTheme: 'Wybierz motyw strony',
-    chooseLayout: 'Wybierz układ menu',
-    chooseSidebarTheme: 'Wybierz motyw menu bocznego',
-    rememberSettings: 'Zapamiętaj ustawienia',
-  },
-  en: {
-    chooseLang: 'Choose language',
-    chooseTheme: 'Choose theme',
-    chooseLayout: 'Choose page layout',
-    chooseSidebarTheme: 'Choose sidebar theme',
-    rememberSettings: 'Remember settings',
-  },
-};
