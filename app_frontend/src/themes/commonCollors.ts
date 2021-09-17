@@ -24,5 +24,5 @@ export const commonColors = {
   chocolate: '#622c1e',
   dark: '#403f3f',
   light: '#b3b3b3',
-  blue: '#006ba9',
+  blue: '#00bfeb',
 };
