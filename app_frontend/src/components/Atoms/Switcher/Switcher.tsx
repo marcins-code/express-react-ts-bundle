@@ -1,13 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-interface SwitcherProps {
+export interface SwitcherProps {
     name: string;
     switchColor:string;
     notCheckedColor: string;
     defaultChecked: boolean;
-    value:string;
-    // eslint-disable-next-line react/require-default-props
+    value?:string | number;
     type?:string;
     onChange(event: React.ChangeEvent<HTMLInputElement>): void | undefined;
 }
@@ -22,11 +21,9 @@ const StyledInput = styled.input<SwitcherProps>`
   width: 40px;
   height: 20px;
   -webkit-appearance: none;
-  /* background: linear-gradient(0deg, #333, #000); */
   outline: none;
   cursor: pointer;
   border-radius: 20px;
-  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
   box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
   &:checked {
     ${(props) => props.switchColor
@@ -59,7 +56,7 @@ const StyledInput = styled.input<SwitcherProps>`
     position: absolute;
     top: calc(50% - 2px);
     left: 20px;
-    width: 0px;
+    width: 0;
     height: 4px;
     background: linear-gradient(0deg, #6b6b6b, #000);
     border-radius: 50%;
