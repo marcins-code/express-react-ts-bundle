@@ -1,29 +1,27 @@
 import { chocolateTheme, darkTheme, lightTheme } from './appThemes';
-import { commonColorsAndSchemes } from './collorSchemes';
+import { commonColors } from './commonCollors';
 
 export const ThemeMixer = (appTheme:any, initSettings:any) => {
   let theme;
   switch (appTheme) {
     case 'dark': {
-      theme = { ...commonColorsAndSchemes, ...darkTheme };
+      theme = { ...commonColors, ...darkTheme };
       break;
     }
 
     case 'light': {
-      theme = { ...commonColorsAndSchemes, ...lightTheme };
+      theme = { ...commonColors, ...lightTheme };
       break;
     }
 
     case 'chocolate': {
-      theme = { ...commonColorsAndSchemes, ...chocolateTheme };
+      theme = { ...commonColors, ...chocolateTheme };
       break;
     }
 
     default:
-      theme = { ...commonColorsAndSchemes, ...initSettings.appTheme };
+      theme = { ...commonColors, ...initSettings.appTheme };
   }
-
-  // console.log(theme);
 
   return theme;
 };
