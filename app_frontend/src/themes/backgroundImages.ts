@@ -1,13 +1,15 @@
-import ironGrip from '../assets/images/backgrounds/iron-grip.png';
-import blackPaper from '../assets/images/backgrounds/black-paper.png';
-import blackOrchid from '../assets/images/backgrounds/black-orchid.png';
-import textile from '../assets/images/backgrounds/clean-textile.png';
 import debutLight from '../assets/images/backgrounds/debut-light.png';
+import cardboard from '../assets/images/backgrounds/cardboard.png';
+import fabricOfSquares from '../assets/images/backgrounds/fabric-of-squares.png';
+import randomGray from '../assets/images/backgrounds/random-grey-variations.png';
+import gridNoise from '../assets/images/backgrounds/grid-noise.png';
+import lowContrastLinen from '../assets/images/backgrounds/low-contrast-linen.png';
 
 export const backgroundImages = {
-  textile,
-  blackOrchid,
   debutLight,
-  ironGrip,
-  blackPaper,
+  cardboard,
+  fabricOfSquares,
+  randomGray,
+  gridNoise,
+  lowContrastLinen,
 };
